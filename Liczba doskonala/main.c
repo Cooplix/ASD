@@ -1,30 +1,51 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdbool.h> 
+#include <math.h>
 
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
 
 void chekPerfectNumber();
-
+int Euklid(int);
+bool isPrime(int);
 
 int main(int argc, char *argv[]) {
 	chekPerfectNumber();
+//	printf("%d\n", Euklid(4));
+	
+//	while(true) {
+//		int i;
+//	scanf("%d", &i);
+//	printf("%d\n", isPrime(i));
+//}
 	return 0;
 }
 
 void chekPerfectNumber() {
-	int s, l;
-	for(int i = 2; i < 1000000000; i++) {
-		s = 0;
-		for(int j = 1; j < i; j++)
-			if(i%j == 0) {
-			s += j;
+	long long int N;
+	for(int i = 1; i < 17; i++) {
+		if(isPrime(Euklid(i)) == true) {
+			N = Euklid(i) * pow(2, i-1);
+			printf("%d\n", N);
 		}
-				
-		if(s == i) {
-		printf("%d\n", i);
-		}
-				
 	}
+	
+}
+
+
+int Euklid(int n) {
+//	int odp;
+//	odp = pow(2,n) - 1;
+	
+	return pow(2,n) - 1;
+}
+
+bool isPrime(int E) {
+	for(int i = 2; i <= sqrt(E); i++)
+		if(E % i == 0)
+			return false;
+			
+	return true;
 }
 
 
