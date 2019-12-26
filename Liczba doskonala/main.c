@@ -11,13 +11,6 @@ bool isPrime(int);
 
 int main(int argc, char *argv[]) {
 	chekPerfectNumber();
-//	printf("%d\n", Euklid(4));
-	
-//	while(true) {
-//		int i;
-//	scanf("%d", &i);
-//	printf("%d\n", isPrime(i));
-//}
 	return 0;
 }
 
@@ -34,9 +27,6 @@ void chekPerfectNumber() {
 
 
 int Euklid(int n) {
-//	int odp;
-//	odp = pow(2,n) - 1;
-	
 	return pow(2,n) - 1;
 }
 
