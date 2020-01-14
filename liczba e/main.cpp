@@ -9,6 +9,7 @@ double E(double);
 
 
 int main() {
+    cout << "Podaj dokladnosc";
     double esp;
     std::cin >> esp;
     cout << setprecision(esp + 1) << E(esp);
